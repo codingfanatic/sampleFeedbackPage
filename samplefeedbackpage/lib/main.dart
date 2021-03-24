@@ -40,9 +40,6 @@ class _MyHomePageState extends State<MyHomePage> {
   String _value;
   @override
   Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
     // The Flutter framework has been optimized to make rerunning build methods
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
@@ -91,6 +88,15 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
               hint: Text('Select Topic'),
               value: _value,
+            ),
+            TextField(
+                decoration: InputDecoration(
+              border: InputBorder.none,
+              hintText: 'Please enter you feedback here:',
+            )),
+            ElevatedButton(
+              onPressed: () {},
+              child: Text('Submit'),
             ),
           ],
         ),
