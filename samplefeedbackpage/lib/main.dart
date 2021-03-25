@@ -70,11 +70,9 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
             Text(
-              'Thank you for taking the time to provide us feedback',
+              'Thank you for taking the time to provide us feedback\n\nPlease let us know your question below',
             ),
-            Text(
-              'Please let us know your question below',
-            ),
+            Text(''),
             DropdownButton<String>(
               items: [
                 DropdownMenuItem<String>(
