@@ -73,20 +73,6 @@ class _MyHomePageState extends State<MyHomePage> {
               'Thank you for taking the time to provide us feedback\n\nPlease let us know your question below',
             ),
             Text(''),
-            DropdownButton<String>(
-              items: [
-                DropdownMenuItem<String>(
-                  child: Text('Item 1'),
-                  value: 'one',
-                ),
-                DropdownMenuItem<String>(
-                  child: Text('Item 2'),
-                  value: 'two',
-                ),
-              ],
-              hint: Text('Select Topic'),
-              value: _value,
-            ),
             TextField(
                 decoration: InputDecoration(
               border: InputBorder.none,
