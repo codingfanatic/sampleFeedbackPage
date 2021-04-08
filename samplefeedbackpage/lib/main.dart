@@ -49,9 +49,8 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
+      body: Padding(
+        padding: EdgeInsets.all(24),
         child: Column(
           // Column is also a layout widget. It takes a list of children and
           // arranges them vertically. By default, it sizes itself to fit its
@@ -67,17 +66,27 @@ class _MyHomePageState extends State<MyHomePage> {
           // center the children vertically; the main axis here is the vertical
           // axis because Columns are vertical (the cross axis would be
           // horizontal).
-          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
-            Text(
-              'Thank you for taking the time to provide us feedback\n\nPlease let us know your question below',
+            Expanded(
+              child: Padding(
+                padding: EdgeInsets.only(top: 32),
+                child: Text(
+                  'Thank you for taking the time to provide us feedback\n\nPlease let us know your question below',
+                  textAlign: TextAlign.center,
+                ),
+              ),
             ),
-            Text(''),
-            TextField(
+            Expanded(
+              flex: 2,
+              child: TextField(
+                maxLines: 7,
                 decoration: InputDecoration(
-              border: InputBorder.none,
-              hintText: 'Please enter you feedback here:',
-            )),
+                  border: OutlineInputBorder(),
+                  hintText: 'Please enter you feedback here:',
+                ),
+              ),
+            ),
             ElevatedButton(
               onPressed: () {},
               child: Text('Submit'),
