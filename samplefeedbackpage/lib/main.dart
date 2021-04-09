@@ -37,7 +37,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  String _value;
+  String _feedbackIntro =
+      'Thank you for taking the time to provide us feedback\n\nPlease let us know your question below';
   @override
   Widget build(BuildContext context) {
     // The Flutter framework has been optimized to make rerunning build methods
@@ -70,17 +71,18 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             Expanded(
               child: Padding(
-                padding: EdgeInsets.only(top: 32),
+                padding: EdgeInsets.only(top: 16),
                 child: Text(
-                  'Thank you for taking the time to provide us feedback\n\nPlease let us know your question below',
+                  _feedbackIntro,
                   textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 18),
                 ),
               ),
             ),
             Expanded(
               flex: 2,
               child: TextField(
-                maxLines: 7,
+                maxLines: 10,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
                   hintText: 'Please enter you feedback here:',
@@ -90,6 +92,9 @@ class _MyHomePageState extends State<MyHomePage> {
             ElevatedButton(
               onPressed: () {},
               child: Text('Submit'),
+              style: ButtonStyle(
+                  overlayColor:
+                      MaterialStateProperty.all<Color>(Colors.yellow)),
             ),
           ],
         ),
